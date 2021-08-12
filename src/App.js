@@ -3,6 +3,8 @@ import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchData } from './store/restaurantSlice';
+import TuneIcon from '@material-ui/icons/Tune';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 import Card from './Card';
 
@@ -11,6 +13,7 @@ import "./assets/css/style.css"
 function App() {
 
   const RestaurantList = useSelector(state => state.restaurants.list)
+  console.log()
 
   
   const dispatch = useDispatch()
@@ -28,15 +31,15 @@ function App() {
       {/* NavBar */}
       <div className="navbar">
           <div className="options option-1">
-            Restaurants
+            {RestaurantList.length} Restaurants
           </div>
 
           <div className="options option-2">
-            Relevance
+            Relevance <span className="downArr"><KeyboardArrowDownIcon /></span>
           </div>
 
           <div className="options option-3">
-            Filter
+            Filter <span className="sliderArr"><TuneIcon rotate={true}/></span>
           </div>
           
       </div>

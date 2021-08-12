@@ -62,28 +62,73 @@ font: normal normal medium 40px/51px Aktiv Grotesk;
 letter-spacing: 0px;
 color: #1C2B44;
 opacity: 1;
+text-align: left;
+}
+
+.price{
+    position: relative;
+    top: -55px;
+    left: 150px;
+}
+
+.main-box{
+    width: 80%;
+   
+    margin: 0 auto;
 }
 
 .time, .price{
     font-size: 28px;
-    line-height: 36px; 
+    line-height: 36px;
+    margin-top: 20px; 
 }
 
 .btn{
+    font-size: 30px;
+    line-height: 38px;
     display: inline-block;
     font-weight: 400;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    color: #ff6600;
+    background-color: #FFFFFF;
+    border-color: #fff;
     border: 1px solid transparent;
     padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
     border-radius: .25rem;
+    position: relative;
+    float: right;
+    top: -100px;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.ritArr{
+    color: black;
+    
+}
+
+.downArr{
+    color: #ff6600;
+    position: relative;
+    top: 5px;
+}
+
+.downArr .MuiSvgIcon-root, .ritArr .MuiSvgIcon-root{
+font-size: 2rem;
+}
+
+.sliderArr{
+    color: #ff6600;
+    position: relative;
+    top: 5px;
+    transform: rotate(90deg);
+}
+
+.ritArr{
+    color: #000000;
+    position: relative;
+    top: 8px;
 }
 
 .review{
@@ -104,4 +149,7 @@ font-family: Aktiv Grotesk;
 font-size: 30px;
 line-height: 38px;
 font-weight: medium;
+float: right;
+position: relative;
+top: -40px;
 }

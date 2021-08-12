@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import "./assets/css/style.css"
 
 function Card({props}) {
@@ -17,20 +18,20 @@ function Card({props}) {
         <>
             <div>
                 <img className="imgs" src={props.restaurantImage}></img>
-
+                <div className="main-box">
                 <div className="header">{props.restaurantName}</div>
                 <div className="sub-header">{props.cuisines}</div>
-                <div className="review"> {'★'} {props.averageReview}</div>
+                <span className="review"> {'★'} {props.averageReview}</span>
                 <div className="time">{props.displayTime}</div>
                 <div className={props.outlet.length <= 1 ? "price spac-bt": "price"}>{props.displayCostForTwo}</div>
-
+                
                 {/* Outlets */}
              {props.outlet.length > 1 && (
-                    <div className="button btn btn-primary spac-bt" onClick={()=>setExpand(!expand)}> {props.outlet.length} Outlets near you </div>
+                    <div className="button btn btn-primary spac-bt" onClick={()=>setExpand(!expand)}> {props.outlet.length} Outlets near you <span className="ritArr"><KeyboardArrowRightIcon /></span></div>
                 )}
 
                 {expand && props.outlet.map(outlet)}
-
+              </div>
             </div>
         </>
     )
